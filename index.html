@@ -3,31 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Я тебя люблю и точка</title>
+    <title>Любовь к Лизе ❤️</title>
     <style>
         body {
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            background-color: #ffebf0;
+            background: linear-gradient(to bottom, #ff99cc, #ff3366);
             font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
         h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #d40052;
-            text-align: center;
-            animation: fadeIn 2s ease-in-out;
+            font-size: 36px;
         }
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: scale(0.8); }
-            100% { opacity: 1; transform: scale(1); }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background: white;
+            color: #ff3366;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <h1>Я тебя люблю и точка ❤️</h1>
+    <div class="container">
+        <h1>Любовь к Лизе ❤️</h1>
+        <p>Ты – самая прекрасная и удивительная девушка в мире! 💖</p>
+        <button class="btn" onclick="toggleStory()">Наша история 💑</button>
+        <p id="story" class="hidden">Однажды встретив тебя, я понял, что нашел самое дорогое сокровище. 
+        Каждый день с тобой – это новая сказка, и я бесконечно счастлив, что могу любить тебя. 💕</p>
+    </div>
+    <script>
+        function toggleStory() {
+            var story = document.getElementById("story");
+            if (story.classList.contains("hidden")) {
+                story.classList.remove("hidden");
+            } else {
+                story.classList.add("hidden");
+            }
+        }
+    </script>
 </body>
-</html> 
+</html>
